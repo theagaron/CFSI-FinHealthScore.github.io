@@ -1,2 +1,0 @@
-jschintz.github.io
-==================
