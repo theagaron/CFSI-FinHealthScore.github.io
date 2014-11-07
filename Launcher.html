@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./codecanyon/src/css/ilightbox.css"/>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    
+    <!-- Not stored in GitHub. You must pay for this Plugin yourself -->
+    <script type="text/javascript" src="./codecanyon/src/js/jquery.requestAnimationFrame.js"></script>
+    <script type="text/javascript" src="./codecanyon/src/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="./codecanyon/src/js/ilightbox.packed.js"></script>
+    
+    <script type="text/javascript" src="https://tableau.russellchristopher.org/javascripts/api/tableau_v8.js"></script>
+
+
+
+</head>
+
+
+<body>
+    <div id="content"></div>
+
+    <script>
+        var viz, agent;
+
+
+
+        function initialize() {
+
+				$.iLightBox(
+					[
+						
+                        {
+							URL: "https://tableau.russellchristopher.org/t/SkunkWorks/views/BMD-TR-WEB/Dashboard4?:embed=y&:display_count=no&:toolbar=no",
+							options: {
+								thumbnail: "img/thumb-Visits-vs-Time.jpg",
+                                height: 450,
+                                width: 936
+							},
+							type: "iframe",
+							caption: "Tableau Public visualization by unknown author."
+						},
+                        {
+							URL: "https://tableau.russellchristopher.org/t/SkunkWorks/views/BMD-TR-WEB/C-Full-Web?:embed=y&:display_count=no&:toolbar=no",
+							options: {
+								thumbnail: "img/thumb-C-Full-Web.jpg",
+                                height: 450,
+                                width: 936
+							},
+							type: "iframe",
+							caption: "Tableau Public visualization by unknown author."
+						},
+                        {
+							URL: "https://tableau.russellchristopher.org/t/SkunkWorks/views/UnemploymentHorizionChart/HorizonChart?:embed=y&:toolbar=no&:display_count=no",
+							options: {
+								thumbnail: "img/thumb_horizon-chart.jpg",
+                                height: 450,
+                                width: 936
+							},
+							type: "iframe",
+							caption: "Unemployment Horizon by Joe Mako"
+						},
+
+						{
+							URL: "https://tableau.russellchristopher.org/t/SkunkWorks/views/2014FIFAWorldCupBRAvsGERPlayerAttention/PlayerAttention?:embed=y&:display_count=no&:toolbar=no",
+							options: {
+								thumbnail: "img/thumb-player-attention.jpg",
+                                height: 450,
+                                width: 936
+							},
+							type: "iframe",
+							caption: "And lastly, this one. Checkmate."
+						},
+						{
+							URL: "https://tableau.russellchristopher.org/t/SkunkWorks/views/geographyofdiabetes/Dashboard2?:embed=y&:display_count=no&:toolbar=no",
+							options: {
+								thumbnail: "img/thumb-diabetes.jpg",
+                                height: 450,
+                                width: 936
+							},
+							type: "iframe"
+						},
+						{
+							URL: "https://tableau.russellchristopher.org/t/SkunkWorks/views/contributorstoobesity/Eatyourvegtables?:embed=y&:display_count=no&:toolbar=no",
+							options: {
+								thumbnail: "img/thumb-eatyourveggies.jpg",
+                                height: 450,
+                                width: 936
+							},
+							type: "iframe"
+						},
+						{
+							URL: "https://tableau.russellchristopher.org/t/SkunkWorks/views/TwInfluencers/TwitterInfluencers?:embed=y&:display_count=no&:toolbar=no",
+							options: {
+								thumbnail: "img/thumb-TwitterInfluencers.jpg",
+                                height: 450,
+                                width: 936
+							},
+							type: "iframe"
+						}
+					],
+					{
+						skin: 'metro-white',
+						path: 'horizontal',
+						overlay: {
+							opacity: .7,
+							blur: false
+						},
+						keyboard: {
+							esc: false
+						},
+						styles: {
+							nextOpacity: .55,
+							prevOpacity: .55
+						}
+					}
+				);
+				return false;
+			};
+			// End of the "Open in Modal" Example
+       
+        
+    </script>
+
+
+    <script type="text/javascript">
+        // Initialize the app on document ready.
+        $(initialize);
+    </script>
+
+
+
+
+
+</body>
+
+
+
+</html>
