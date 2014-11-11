@@ -16,7 +16,22 @@ function initialize()
 {
 $('#SandBox').mixItUp();
 $('img').on("click", function (e) {
-$('.category-1').iLightBox();
+$.iLightBox([
+{
+URL: "http://243ewmp01.blackmesh.com/t/FSDKenya/views/" + $(this).attr("vpath"),
+type: 'iframe',
+options: {
+width: $(this).attr("vizwidth"),
+height: $(this).attr("vizheight")
+},
+}
+],
+{skin: "metro-black" ,
+controls: {
+fullscreen: true
+}
+}
+);
 });
 }
 </script>
