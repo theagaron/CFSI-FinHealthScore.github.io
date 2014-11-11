@@ -9,8 +9,8 @@ window.onload= function() {
 	var vizDiv = document.getElementById('viz');
 	var vizURL = "http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/ExploreDemographics";
 	var options = {
-		width: '600px',
-		height: '540px',
+		width: '800px',
+		height: '600px',
 		hideToolbar: true,
 		hideTabs: true,
 		onFirstInteractive: function () {
