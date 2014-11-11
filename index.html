@@ -11,18 +11,27 @@
 <script type="text/javascript" src="https://243ewmp01.blackmesh.com/javascripts/api/tableau_v8.js"></script>
 <!-- JS added for export buttons-->
 <script type="text/javascript" src=".Export.js"></script>
-
 <script>
 function initialize()
 {
 $('#SandBox').mixItUp();
 $('img').on("click", function (e) {
-
-$('[rel=class]').iLightBox({
-  skin: 'metro-black',
-  path: 'horizontal'
-});
-  
+$.iLightBox([
+{
+URL: "http://243ewmp01.blackmesh.com/t/FSDKenya/views/" + $(this).attr("vpath"),
+type: 'iframe',
+options: {
+width: $(this).attr("vizwidth"),
+height: $(this).attr("vizheight")
+},
+}
+],
+{skin: "metro-black" ,
+controls: {
+fullscreen: true
+}
+}
+);
 });
 }
 </script>
@@ -35,19 +44,15 @@ $('[rel=class]').iLightBox({
 <span class="btn filter" data-filter=".category-1">Financial Access Survey</span>
 <span class="btn filter" data-filter=".category-2">Financial Supply</span>
 <span class="btn filter" data-filter=".category-3">Clustering</span>
+<span class="btn filter" data-filter="none">None</span>
 </div>
 </div>
 <div id="SandBox" class="sandbox">
-<div class="mix category-1" data-value="1"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/ExploreDemographics" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/ExploreDemographics" alt="some_text"></div>
-<div class="mix category-1" data-value="2"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/Singlevariableanalysis" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Singlevariableanalysis" alt="some_text"></div>
-<div class="mix category-1" data-value="3"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/Demographictovariablecomparison" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Demographictovariablecomparison" alt="some_text"></div>
-<div class="mix category-1" data-value="4"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/Timeseries" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Timeseries" alt="some_text"></div>
-<div class="mix category-1" data-value="5"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/Comparemultiplevariables" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Comparemultiplevariables" alt="some_text"></div>
-<div class="mix category-2" data-value="6"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/ExploreDemographics" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/ExploreDemographics" alt="some_text"></div>
-<div class="mix category-2" data-value="7"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/Singlevariableanalysis" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Singlevariableanalysis" alt="some_text"></div>
-<div class="mix category-2" data-value="8"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/Demographictovariablecomparison" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Demographictovariablecomparison" alt="some_text"></div>
-<div class="mix category-2" data-value="9"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/Timeseries" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Timeseries" alt="some_text"></div>
-<div class="mix category-2" data-value="10"><img vpath="http://243ewmp01.blackmesh.com/t/FSDKenya/views/FinancialAccessDemo/Comparemultiplevariables" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Comparemultiplevariables" alt="some_text"></div>
+<div class="mix category-1" data-value="1"><img vpath="/FinancialAccessDemo/ExploreDemographics" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/ExploreDemographics" alt="some_text"></div>
+<div class="mix category-1" data-value="2"><img vpath="/FinancialAccessDemo/Singlevariableanalysis" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Singlevariableanalysis" alt="some_text"></div>
+<div class="mix category-1" data-value="3"><img vpath="/FinancialAccessDemo/Demographictovariablecomparison" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Demographictovariablecomparison" alt="some_text"></div>
+<div class="mix category-1" data-value="4"><img vpath="/FinancialAccessDemo/Timeseries" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Timeseries" alt="some_text"></div>
+<div class="mix category-1" data-value="5"><img vpath="/FinancialAccessDemo/Comparemultiplevariables" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinancialAccessDemo/Comparemultiplevariables" alt="some_text"></div>
 <div class="gap"></div>
 <div class="gap"></div>
 </div>
