@@ -11,15 +11,18 @@
 <script type="text/javascript" src="https://243ewmp01.blackmesh.com/javascripts/api/tableau_v8.js"></script>
 <!-- JS added for export buttons-->
 <script type="text/javascript" src=".Export.js"></script>
+
 <script>
 function initialize()
 {
 $('#SandBox').mixItUp();
 $('img').on("click", function (e) {
-$('.class').iLightBox({
-  URL: "http://243ewmp01.blackmesh.com/t/FSDKenya/views/" + $(this).attr("vpath"),
+
+$('[rel=class]').iLightBox({
   skin: 'metro-black',
-  path: 'vertical'
+  path: 'horizontal'
+});
+  
 });
 }
 </script>
