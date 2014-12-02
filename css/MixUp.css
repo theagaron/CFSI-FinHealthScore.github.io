@@ -602,7 +602,7 @@ body {
     padding-top: 0px;
   }
   .has-sidebar .master-container {
-    margin-left: 320px;
+    margin-left: 100px;
     border-left: 1px solid #e8e8e8;
   }
   .nav-open .master-container,
@@ -618,7 +618,7 @@ body {
 }
 @media all and (min-width: 1261px) {
   .has-sidebar .master-container {
-    margin-left: 30%;
+    margin-left: 10%;
   }
 }
 /* Content Sections */
@@ -680,7 +680,7 @@ section.codepen + .paragraph article {
 @media all and (min-width: 1501px) {
   section article > *,
   section > header > * {
-    max-width: 840px;
+    max-width: 1240px;
   }
 }
 /**
