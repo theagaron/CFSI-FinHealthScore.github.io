@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="./css/MixUp.css"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="./scripts/jquery.mixitup.js"></script>
+<link rel="stylesheet" type="text/css" href="./codecanyon/src/css/ilightbox.css"/>
+<!-- Not stored in GitHub. You must pay for this Plugin yourself -->
+<script type="text/javascript" src="./codecanyon/src/js/jquery.requestAnimationFrame.js"></script>
+<script type="text/javascript" src="./codecanyon/src/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="./codecanyon/src/js/ilightbox.packed.js"></script>
+<script type="text/javascript" src="https://243ewmp01.blackmesh.com/javascripts/api/tableau_v8.js"></script>
+<!-- JS added for export buttons-->
+<script type="text/javascript" src=".Export.js"></script>
+<script>
+function initialize()
+{
+$('#SandBox').mixItUp();
+$('img').on("click", function (e) {
+$.iLightBox([
+{
+URL: "http://243ewmp01.blackmesh.com/t/FSDKenya/views/" + $(this).attr("vpath"),
+type: 'iframe',
+options: {
+width: $(this).attr("vizwidth"),
+height: $(this).attr("vizheight")
+},
+}
+],
+{skin: "metro-black" ,
+controls: {
+fullscreen: true
+}
+}
+);
+});
+}
+</script>
+<div class="master-container">
+<section>
+<div class="control-bar sandbox-control-bar">
+<div class="group">
+<label>Filter:</label>
+<span class="btn filter active" data-filter=".category-1">Financial Access Survey</span>
+<span class="btn filter" data-filter=".category-2">CICO Access Points Supply</span>
+<span class="btn filter" data-filter=".category-3">FinAccess vs CICO Supply</span>
+<span class="btn filter" data-filter=".category-4">FinAccess Sampling Design</span>
+</div>
+</div>
+<div id="SandBox" class="sandbox">
+<div class="mix category-mix category-1" data-value="1"><img vpath="FinAccessSurveyResults/ExploreDemographics" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyResults/ExploreDemographics" alt="some_text"></div>
+<div class="mix category-mix category-1" data-value="2"><img vpath="FinAccessSurveyResults/Singlevariableanalysis" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyResults/Singlevariableanalysis" alt="some_text"></div>
+<div class="mix category-mix category-1" data-value="3"><img vpath="FinAccessSurveyResults/Demographictovariablecomparison" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyResults/Demographictovariablecomparison" alt="some_text"></div>
+<div class="mix category-mix category-1" data-value="4"><img vpath="FinAccessSurveyResults/Comparemultiplevariables" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyResults/Comparemultiplevariables" alt="some_text"></div>
+<div class="mix category-mix category-1" data-value="5"><img vpath="FinAccessSurveyResults/Timeseries" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyResults/Timeseries" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="6"><img vpath="CICOAccessPointsSupply/KeyFindings" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/KeyFindings" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="7"><img vpath="CICOAccessPointsSupply/ClusterAnalysis" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/ClusterAnalysis" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="8"><img vpath="CICOAccessPointsSupply/NationalOverview" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/NationalOverview" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="9"><img vpath="CICOAccessPointsSupply/HeatMap" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/HeatMap" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="10"><img vpath="CICOAccessPointsSupply/InstitutionTypeAnalysis" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/InstitutionTypeAnalysis" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="11"><img vpath="CICOAccessPointsSupply/CompanyAnalysis" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/CompanyAnalysis" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="12"><img vpath="CICOAccessPointsSupply/InstitutionGeoComparison" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/InstitutionGeoComparison" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="13"><img vpath="CICOAccessPointsSupply/SupplyandDemandMap" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/SupplyandDemandMap" alt="some_text"></div>
+<div class="mix category-mix category-2" data-value="14"><img vpath="CICOAccessPointsSupply/SupplyandDemandRatio" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/CICOAccessPointsSupply/SupplyandDemandRatio" alt="some_text"></div>
+<div class="mix category-mix category-3" data-value="15"><img vpath="FinAccessSurveyvsCICOSupply/Problem" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyvsCICOSupply/Problem" alt="some_text"></div>
+<div class="mix category-mix category-3" data-value="16"><img vpath="FinAccessSurveyvsCICOSupply/Results" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyvsCICOSupply/Results" alt="some_text"></div>
+<div class="mix category-mix category-3" data-value="17"><img vpath="FinAccessSurveyvsCICOSupply/ExploreDemographics" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyvsCICOSupply/ExploreDemographics" alt="some_text"></div>
+<div class="mix category-mix category-3" data-value="18"><img vpath="FinAccessSurveyvsCICOSupply/Singlevariableanalysis" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyvsCICOSupply/Singlevariableanalysis" alt="some_text"></div>
+<div class="mix category-mix category-3" data-value="19"><img vpath="FinAccessSurveyvsCICOSupply/Demographictovariablecomparison" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSurveyvsCICOSupply/Demographictovariablecomparison" alt="some_text"></div>
+<div class="mix category-mix category-4" data-value="20"><img vpath="FinAccessSamplingDesign/SamplingDesign" vizheight="800" vizwidth="1000" src="http://243ewmp01.blackmesh.com/t/FSDKenya/thumb/views/FinAccessSamplingDesign/SamplingDesign" alt="some_text"></div>
+<div class="gap"></div>
+<div class="gap"></div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
+// Initialize the app on document ready.
+$(initialize);
+</script>
+</html>
