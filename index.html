@@ -1,4 +1,38 @@
 <!DOCTYPE html>
 <html>
 Hey there buddy,  get this shit working
+
+
+
+<script type="text/javascript">
+function getQueryVariable(variable)
+{
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+
+var q1 = getQueryVariable("q1");
+var q2 = getQueryVariable("q2");
+var q3 = getQueryVariable("q3");
+var q4 = getQueryVariable("q4");
+var q5 = getQueryVariable("q5");
+var q6 = getQueryVariable("q6");
+var q7 = getQueryVariable("q7");
+var q8 = getQueryVariable("q8");
+
+alert(q1);
+alert(q2);
+alert(q3);
+alert(q4);
+alert(q5);
+alert(q6);
+alert(q7);
+alert(q8);
+
+</script>
 </html>
