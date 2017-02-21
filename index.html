@@ -1,6 +1,112 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+
+
+<style> 
+
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    text-align: center;
+	width: 400px;
+    height: 150px;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+.spend-item {
+	font-size: 40px;
+    background-color: #903a91;
+	color:white;
+    width: 50px;
+    height: 100px;
+    margin: 10px;
+}
+
+.save-item {
+	font-size: 40px;
+    background-color: #f6a031;
+	color:white;
+    width: 50px;
+    height: 100px;
+    margin: 10px;
+}
+
+.borrow-item {
+	font-size: 40px;
+    background-color: #3686c6;
+	color:white;
+    width: 50px;
+    height: 100px;
+    margin: 10px;
+}
+
+.plan-item {
+	font-size: 40px;
+    background-color: #91c43e;
+	color:white;
+    width: 50px;
+    height: 100px;
+    margin: 10px;
+}
+
+.total-item {
+	font-size: 40px;
+    background-color: #60636a;
+	color:white;
+    width: 50px;
+    height: 100px;
+    margin: 10px;
+}
+
+
+
+
+header {background: black;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+</head>
+
+<div class="flex-container">
+  <div class="total-item">Financial Health Score:  <span id="total">.</span></div>
+</div>
+
+<div class="flex-container">
+<div class="spend-item">Spend:    <span id="spend">.</span></div>
+<div class="save-item">Save:      <span id="save">.</span></div>
+</div>
+
+<div class="flex-container">
+<div class="borrow-item">Borrow:    <span id="borrow">.</span></div> 
+<div class="plan-item">Plan:  <span id="plan">.</span></div> 
+</div>
+
 <script type="text/javascript">
 //Snippet to perform a vlookup
 Array.prototype.vlookup = function(needle,index,exactmatch){
@@ -112,16 +218,13 @@ var save=(q3num + q4num)/ 2;
 var borrow=(q5num + q6num)/ 2;
 var plan=(q7num + q8num)/ 2;
 var total=(spend + save + borrow + plan)/ 4;
- 
- document.write(q1num)
- document.write(q2num)
- document.write(q3num)
- document.write(q4num)
- document.write(q5num)
- document.write(q6num)
- document.write(q7num)
- document.write(q8num)
-  document.write(spend)
+
+document.getElementById("spend").innerHTML = spend;
+document.getElementById("save").innerHTML = save;
+document.getElementById("borrow").innerHTML = borrow;
+document.getElementById("plan").innerHTML = plan;
+document.getElementById("total").innerHTML = total;
 </script>
+
 
 </html>
