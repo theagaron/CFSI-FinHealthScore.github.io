@@ -5,6 +5,19 @@ Hey there buddy,  get this shit working
 
 
 <script type="text/javascript">
+//Snippet to perform a vlookup
+Array.prototype.vlookup = function(needle,index,exactmatch){
+    index = index || 0;
+    exactmatch = exactmatch || false;
+    for (var i = 0; i < this.length; i++){
+        var row = this[i];
+
+        if ((exactmatch && row[0]===needle) || row[0].toLowerCase().indexOf(needle.toLowerCase()) !== -1)
+            return (index < row.length ? row[index] : row);
+    }
+    return null;
+}
+//Snippet to parse parameters from url
 function getQueryVariable(variable)
 {
   var query = window.location.search.substring(1);
@@ -23,6 +36,69 @@ var q5 = getQueryVariable("q5");
 var q6 = getQueryVariable("q6");
 var q7 = getQueryVariable("q7");
 var q8 = getQueryVariable("q8");
+
+"q1":[
+  [text:"Generally spend much less than my income",			value:100],
+  [text:"Generally spend a little less than my income",		value:75],
+  [text:"Generally spend about equal to my income",			value:50],
+  [text:"Generally spend a little more than my income",		value:25],
+  [text:"Generally spend much more than my income",			value:0]
+]
+
+
+"q2":[
+  [text:"Pay all of my bills and credit commitments on time and in full",value:100  ],
+  [text:"Pay most of my bills and credit commitments on time and in full",value:80  ],
+  [text:"Pay some of my bills and credit commitments on time and in full",value:60  ],
+  [text:"Do not pay any of my bills and credit commitments on time and in full",value:20  ]
+]
+
+"q3":[
+  [text:"More than 6 months",value:100  ],
+  [text:"4 - 6 months",value:80  ],
+  [text:"1 - 3 months",value:70  ],
+  [text:"2 weeks -3 weeks",value:60  ],
+  [text:"Less than 2 weeks",value:20  ]
+]
+
+"q4":[
+  [text:"Very confident",value:100  ],
+  [text:"Somewhat confident",value:62  ],
+  [text:"Only slightly confident",value:62  ],
+  [text:"Not at all confident",value:25  ]
+]
+
+"q5":[
+  [text:"Do not have any debt",value:100  ],
+  [text:"Have about the right amount of debt",value:100  ],
+  [text:"Have a bit too much debt",value:67  ],
+  [text:"Have an excessive amount of debt",value:33  ]
+]
+
+"q6":[
+  [text:"Excellent ",value:100  ],
+  [text:"Good",value:90  ],
+  [text:"Fair",value:60  ],
+  [text:"Poor ",value:40  ],
+  [text:"Very Poor",value:0  ],
+  [text:"I don’t know what my score is",value:0  ]
+]
+
+"q7":[
+  [text:"Very confident",value:100  ],
+  [text:"Somewhat confident",value:100  ],
+  [text:"Only slightly confident",value:50  ],
+  [text:"Not at all confident",value:25  ],
+  [text:"I don’t have insurance",value:0  ],
+  [text:"I don’t know",value:25  ]
+]
+
+"q8":[
+  [text:"Yes"," my household plans ahead for large expenses",value:100  ],
+  [text:"No"," my household doesn’t plan ahead for large expenses ",value:50],
+  [text:"We would plan ahead if we could",value:70  ],
+  [text:"We do not need to plan ahead because there is always enough money in the bank account to pay for large expenses",value:85]
+]
 }
 </script>
 <body onload="displayMyVar('q1');">
