@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-Hey there buddy,  get this shit working
-
-
 <script type="text/javascript">
 //Snippet to perform a vlookup
 Array.prototype.vlookup = function(needle,index,exactmatch){
@@ -27,7 +24,7 @@ function getQueryVariable(variable)
     if(pair[0] == variable){return pair[1];}
   }
   return(false);
-  
+}  
 var q1 = getQueryVariable("q1");
 var q2 = getQueryVariable("q2");
 var q3 = getQueryVariable("q3");
@@ -43,7 +40,7 @@ var q1 = [
   ["Generally spend about equal to my income",			50],
   ["Generally spend a little more than my income",		25],
   ["Generally spend much more than my income",			0]
-]
+];
 
 
 var q2 = [
@@ -51,7 +48,7 @@ var q2 = [
   ["Pay most of my bills and credit commitments on time and in full",80  ],
   ["Pay some of my bills and credit commitments on time and in full",60  ],
   ["Do not pay any of my bills and credit commitments on time and in full",20  ]
-]
+];
 
 var q3 = [
   ["More than 6 months",100  ],
@@ -59,21 +56,21 @@ var q3 = [
   ["1 - 3 months",70  ],
   ["2 weeks -3 weeks",60  ],
   ["Less than 2 weeks",20  ]
-]
+];
 
 var q4 = [
   ["Very confident",100  ],
   ["Somewhat confident",62  ],
   ["Only slightly confident",62  ],
   ["Not at all confident",25  ]
-]
+];
 
 var q5 = [
   ["Do not have any debt",100  ],
   ["Have about the right amount of debt",100  ],
   ["Have a bit too much debt",67  ],
   ["Have an excessive amount of debt",33  ]
-]
+];
 
 var q6 = [
   ["Excellent ",100  ],
@@ -82,7 +79,7 @@ var q6 = [
   ["Poor ",40  ],
   ["Very Poor",0  ],
   ["I don’t know what my score is",0  ]
-]
+];
 
 var q7 = [
   ["Very confident",100  ],
@@ -91,40 +88,40 @@ var q7 = [
   ["Not at all confident",25  ],
   ["I don’t have insurance",0  ],
   ["I don’t know",25  ]
-]
+];
 
 var q8 = [
   ["Yes"," my household plans ahead for large expenses",100  ],
   ["No"," my household doesn’t plan ahead for large expenses ",50],
   ["We would plan ahead if we could",70  ],
   ["We do not need to plan ahead because there is always enough money in the bank account to pay for large expenses",85]
-]
-}
+];
+
+
+var q1num=q1.vlookup('Generally spend much less than my income',1);
+var q2num=q2.vlookup('Pay most of my bills and credit commitments on time and in full',1);
+var q3num=q3.vlookup('4 - 6 months',1);
+var q4num=q4.vlookup('Very confident',1);
+var q5num=q5.vlookup('Do not have any debt',1);
+var q6num=q6.vlookup('Good',1);
+var q7num=q7.vlookup('Very confident',1);
+var q8num=q8.vlookup('We would plan ahead if we could',1);
+
+var spend=(q1num + q2num)/ 2;
+var save=(q3num + q4num)/ 2;
+var borrow=(q5num + q6num)/ 2;
+var plan=(q7num + q8num)/ 2;
+var total=(spend + save + borrow + plan)/ 4;
+ 
+ document.write(q1num)
+ document.write(q2num)
+ document.write(q3num)
+ document.write(q4num)
+ document.write(q5num)
+ document.write(q6num)
+ document.write(q7num)
+ document.write(q8num)
+  document.write(spend)
 </script>
-<body onload="displayMyVar('q1');">
-        <span id="q1"></span>
-		
-<body onload="displayMyVar('q2');">
-        <span id="q2"></span>
-
-<body onload="displayMyVar('q3');">
-        <span id="q3"></span>
-	
-<body onload="displayMyVar('q4');">
-        <span id="q4"></span>
-	
-<body onload="displayMyVar('q5');">
-        <span id="q5"></span>
-
-<body onload="displayMyVar('q6');">
-        <span id="q6"></span>
-	
-<body onload="displayMyVar('q7');">
-        <span id="q7"></span>
-	
-<body onload="displayMyVar('q8');">
-        <span id="q8"></span>
-	
-
 
 </html>
